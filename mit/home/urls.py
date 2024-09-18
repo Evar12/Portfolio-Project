@@ -4,6 +4,6 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home),
-    path('authorized/', views.authorized)
+    path('', views.HomeView.as_view()),
+    path('authorized/', views.Authorizedviews.as_view()),
 ]
