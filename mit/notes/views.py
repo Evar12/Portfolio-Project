@@ -6,7 +6,7 @@ from django.views.generic import CreateView, ListView, DetailView
 class NotesCreateView(CreateView):
     model = Notes
     fields = ['title', 'text',]
-    success_url = 'mit/notes/'
+    success_url = '/mit/notes'
     template_name = 'notes/notes_form.html'
 
     def form_valid(self, form):
