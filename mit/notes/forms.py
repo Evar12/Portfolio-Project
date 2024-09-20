@@ -14,8 +14,8 @@ class NotesForm(forms.ModelForm):
             'text': 'what is on your mind?'
         }
 
-        # def clean_title(self):
-        #     title = self.cleaned_data['title']
-        #     if len(title) < 5:
-        #         raise forms.ValidationError("Title is too short")
-        #     return title
+        def clean_title(self):
+            title = self.cleaned_data['title']
+            if len(title) < 5:
+                raise forms.ValidationError("Title is too short")
+            return title
