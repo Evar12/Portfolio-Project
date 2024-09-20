@@ -31,7 +31,6 @@ class NotesCreateView(LoginRequiredMixin, CreateView):
     model = Notes
     fields = ['title', 'text',]
     success_url = '/mit/notes'
-    form_class = NotesForm
     template_name = 'notes/notes_form.html'
     login_url = '/login'
 
