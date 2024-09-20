@@ -1,17 +1,22 @@
 from django.shortcuts import render
 from .models import Notes
-from django.views.generic import CreateView, ListView, DetailView
+from django.views.generic import CreateView, ListView, DetailView, UpdateView
+from . forms import NotesForm
 
 # Create your views here.
+class NotesUpdateView(UpdateView):
+    model = Notes
+    success_url = '/mit/notes'
+    form_class = NotesForm
+    # template_name = 'notes/notes_form.html'
+
 class NotesCreateView(CreateView):
     model = Notes
     fields = ['title', 'text',]
     success_url = '/mit/notes'
+    form_class = NotesForm
     template_name = 'notes/notes_form.html'
 
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        return super().form_valid(form)
     
 class NotesListView(ListView):
     model = Notes

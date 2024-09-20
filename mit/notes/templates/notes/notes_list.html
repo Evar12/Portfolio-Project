@@ -17,7 +17,7 @@
         <div class="card mb-4">
             <div class="card-header">{{note.title}}</div>
             <div class="card-body">
-                <p>{{note.text|truncatechars:100}}</p>
+                <p>{{note.text|truncatechars:50}}</p>
             </div>
             <div class="card-footer">
                 <a href="{% url 'my-notes-detail' pk=note.id %}" class="btn btn-primary btn-sm">View Note</a>
