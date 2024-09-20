@@ -4,6 +4,11 @@ from django.views.generic import CreateView, ListView, DetailView, UpdateView, D
 from . forms import NotesForm
 
 # Create your views here.
+class NotesDeleteView(DeleteView):
+    model = Notes
+    success_url = '/mit/notes'
+    template_name = 'notes/delete_note.html'
+
 class NotesUpdateView(UpdateView):
     model = Notes
     success_url = '/mit/notes'
