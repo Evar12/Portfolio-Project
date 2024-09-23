@@ -21,7 +21,7 @@ class NotesUpdateView(LoginRequiredMixin, UpdateView):
     model = Notes
     success_url = '/mit/notes'
     form_class = NotesForm
-    # template_name = 'notes/notes_form.html'
+    template_name = 'notes/notes_form.html'
     login_url = '/login'
 
     def get_queryset(self):
@@ -29,7 +29,7 @@ class NotesUpdateView(LoginRequiredMixin, UpdateView):
 
 class NotesCreateView(LoginRequiredMixin, CreateView):
     model = Notes
-    fields = ['title', 'text',]
+    form_class = NotesForm
     success_url = '/mit/notes'
     template_name = 'notes/notes_form.html'
     login_url = '/login'
