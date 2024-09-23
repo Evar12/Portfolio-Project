@@ -17,7 +17,7 @@
     {% for note in notes%}
     <div class="col-md-4">
         <div class="card mb-4">
-            <div class="card-header">{{note.title}}</div>
+            <div class="card-header fw-bold">{{note.title}}</div>
             <div class="card-body">
                 <p>{{note.text|truncatechars:50}}</p>
             </div>
