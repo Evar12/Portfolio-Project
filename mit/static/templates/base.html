@@ -19,8 +19,9 @@
                 <button class="btn btn-outline-danger" >logout</button>
             </form>
         {% else %}
-        <a href="{% url 'login' %}" class="btn btn-outline-danger" >login</a>
-        <a href="{% url 'signup' %}" class="btn btn-outline-danger" >Signup</a>
+            <a href="{% url 'login' %}" class="btn btn-outline-success" >login</a>
+                <img src="https://cdn.mitmh2024.com/_next/static/assets/public/b2ae3c886333e8fa.png" alt="MIT Logo" width="60">
+            <a href="{% url 'signup' %}" class="btn btn-outline-warning" >Signup</a>
         {% endif %}
 
     </nav>

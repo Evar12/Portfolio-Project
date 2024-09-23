@@ -21,6 +21,7 @@ class SignupView(CreateView):
 
 class LoginInterfaceView(LoginView):
     template_name = 'home/login.html'
+    
 
 class LogoutInterfaceView(LogoutView):
     template_name = 'home/logout.html'
