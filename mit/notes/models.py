@@ -7,4 +7,3 @@ class Notes(models.Model):
     text = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     User = models.ForeignKey(User, on_delete=models.CASCADE, related_name='notes')
-    

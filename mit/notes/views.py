@@ -36,6 +36,7 @@ class NotesCreateView(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         self.object = form.save(commit=False)
+        form.instance.User = self.request.user
         self.object.user = self.request.user
         self.object.save()
         return HttpResponseRedirect (self.get_success_url())
